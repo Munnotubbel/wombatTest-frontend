@@ -11,12 +11,15 @@ import Home from "./routes/Home";
 import Header from "./components/Header";
 
 function App() {
-  console.log(window.innerHeight);
-  console.log(document.documentElement.clientHeight);
+let browserHeight = window.innerHeight
+  window.addEventListener('orientationchange', function () {
+  browserHeight=window.innerHeight
+});
+
   return (
     <Router>
       <DataContextProvider>
-        <div className="outerContainer">
+        <div className="outerContainer" style={{height: window.innerHeight}}>
           <div className="innerContainer">
             <div className="header">
               <Header />
