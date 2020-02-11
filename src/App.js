@@ -11,39 +11,46 @@ import Home from "./routes/Home";
 import Header from "./components/Header";
 
 function App() {
-let browserHeight = window.innerHeight
-  window.addEventListener('orientationchange', function () {
-  browserHeight=window.innerHeight
-});
+  
+  let browserHeight = window.innerHeight;
+  window.addEventListener("orientationchange", function() {
+    var afterOrientationChange = function() {
+      browserHeight = window.innerHeight;
+      window.removeEventListener("resize", afterOrientationChange);
+    };
+    window.addEventListener("resize", afterOrientationChange);
+  });
 
   return (
     <Router>
       <DataContextProvider>
-        <div className="outerContainer" style={{height: window.innerHeight}}>
-          <div className="innerContainer">
-            <div className="header">
-              <Header />
-            </div>
+        <div style={{ height: "100%" }}>
+          <div className="outerContainer" style={{ height: browserHeight }}>
+            <div className="innerContainer">
+              <div className="header">
+                <Header />
+              </div>
 
-            <div className="info">
-              <Switch>
-                <Route path="/settings">
-                  <Settings />
-                </Route>
-                <Route path="/home">
-                  <Home />
-                </Route>
-                <Route path="/explorer">
-                  <Explorer />
-                </Route>
-                <Route exact path="/wallet">
-                  <Wallet />
-                </Route>
-              </Switch>
-            </div>
+              <div className="info">
+                <Switch>
+                  <Route path="/settings">
+                    <Settings />
+                  </Route>
+                  <Route path="/home">
+                    <Home />
+                  </Route>
+                  <Route path="/explorer">
+                    <Explorer />
+                  </Route>
+                  <Route exact path="/wallet">
+                    <Wallet />
+                  </Route>
+                </Switch>
+              </div>
 
-            <div className="footer">
-              <NavBar />
+              <div className="footer">
+                <NavBar />
+              </div>
             </div>
           </div>
         </div>
