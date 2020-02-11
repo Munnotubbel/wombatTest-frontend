@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Full App should render correctly in 1`] = `
+<BrowserRouter>
+  <DataContextProvider>
+    <div
+      className="outerContainer"
+    >
+      <div
+        className="innerContainer"
+      >
+        <div
+          className="header"
+        >
+          <Header />
+        </div>
+        <div
+          className="info"
+        >
+          <Switch>
+            <Route
+              path="/settings"
+            >
+              <Settings />
+            </Route>
+            <Route
+              path="/home"
+            >
+              <Home />
+            </Route>
+            <Route
+              path="/explorer"
+            >
+              <Explorer />
+            </Route>
+            <Route
+              exact={true}
+              path="/wallet"
+            >
+              <Wallet />
+            </Route>
+          </Switch>
+        </div>
+        <div
+          className="footer"
+        >
+          <NavBar />
+        </div>
+      </div>
+    </div>
+  </DataContextProvider>
+</BrowserRouter>
+`;
+
+exports[`test EosLoader should render correctly in 1`] = `
+<img
+  alt="eosLoader"
+  className="pulse"
+  src="https://res.cloudinary.com/munnotubbel/image/upload/v1581182752/wombat/5a52232c2f93c7a8d5137fdd_izhtxc.png"
+/>
+`;
+
+exports[`test Explorer should render correctly in 1`] = `
+<div
+  className="tobeadded"
+>
+  <h1>
+    Explorer
+  </h1>
+</div>
+`;
+
+exports[`test Header should render correctly in 1`] = `
+<div
+  className="headtitle"
+>
+  <h1>
+    loading
+  </h1>
+</div>
+`;
+
+exports[`test Home should render correctly in 1`] = `
+<div
+  className="tobeadded"
+>
+  <h1>
+    Home
+  </h1>
+</div>
+`;
+
+exports[`test NavBar should render correctly in 1`] = `
+<div
+  className="navbar"
+>
+  <NavLink
+    activeClassName="activeRoute"
+    to="/settings"
+  >
+    <NavIcon
+      iconurl="https://res.cloudinary.com/munnotubbel/image/upload/v1581240405/wombat/gear_fnbjbo.png"
+      routename="Settings"
+    />
+  </NavLink>
+  <NavLink
+    activeClassName="activeRoute"
+    to="/wallet"
+  >
+    <NavIcon
+      iconurl="https://res.cloudinary.com/munnotubbel/image/upload/v1581240405/wombat/wallet_qg6uwn.png"
+      routename="Wallet"
+    />
+  </NavLink>
+  <NavLink
+    activeClassName="activeRoute"
+    to="/home"
+  >
+    <NavIcon
+      iconurl="https://res.cloudinary.com/munnotubbel/image/upload/v1581240455/wombat/home_shuqs8.png"
+      routename="Home"
+    />
+  </NavLink>
+  <NavLink
+    activeClassName="activeRoute"
+    to="/explorer"
+  >
+    <NavIcon
+      iconurl="https://res.cloudinary.com/munnotubbel/image/upload/v1581240405/wombat/compass_wzpihn.png"
+      routename="Explorer"
+    />
+  </NavLink>
+</div>
+`;
+
+exports[`test NavIcon should render correctly in 1`] = `
+<div
+  className="navicon"
+>
+  <img
+    alt="NavButton"
+  />
+  <p />
+</div>
+`;
+
+exports[`test ProgressBar should render correctly in 1`] = `
+<div
+  className="progressbar"
+>
+  <div
+    className="percent"
+  >
+    <div>
+      -
+       %
+    </div>
+  </div>
+  <div
+    className="barOuter"
+  >
+    <div
+      style={
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "black",
+          "borderStyle": "solid",
+          "borderWidth": "2px",
+          "height": "16px",
+          "maxWidth": "100%",
+          "width": "0%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`test RessourceType should render correctly in 1`] = `
+<div
+  className="ressource_type"
+>
+  <div
+    id="type"
+  />
+  <div
+    id="consumption"
+  />
+  <div
+    className="stakedinfo"
+  >
+    <p />
+  </div>
+</div>
+`;
+
+exports[`test Ressources should render correctly in 1`] = `
+<div
+  className="ressources"
+>
+  <div>
+    <RessourceType
+      consumption="0kb / 0kb"
+      staked="0.0000"
+      type="Net"
+      withIcon={true}
+    />
+    <ProgressBar
+      percent={0}
+      slug="netBar"
+    />
+  </div>
+  <div>
+    <RessourceType
+      consumption="0kb / 0kb"
+      staked="0.0000"
+      type="Cpu"
+      withIcon={true}
+    />
+    <ProgressBar
+      percent={0}
+      slug="cpuBar"
+    />
+  </div>
+  <div
+    style={
+      Object {
+        "marginBottom": "60px",
+      }
+    }
+  >
+    <RessourceType
+      consumption="0kb / 0kb"
+      staked=""
+      type="Ram"
+    />
+    <ProgressBar
+      percent={0}
+      slug="ramBar"
+    />
+  </div>
+</div>
+`;
+
+exports[`test Settings should render correctly in 1`] = `
+<div
+  className="tobeadded"
+>
+  <h1>
+    Settings
+  </h1>
+</div>
+`;
+
+exports[`test TradeButtons should render correctly in 1`] = `
+<div
+  className="tradebuttons"
+>
+  <div>
+    <button
+      className="tradebutton"
+    >
+      buy
+    </button>
+  </div>
+  <div>
+    <button
+      className="tradebutton"
+    >
+      send
+    </button>
+  </div>
+  <div>
+    <button
+      className="tradebutton"
+    >
+      sell
+    </button>
+  </div>
+</div>
+`;
+
+exports[`test Wallet should render correctly in 1`] = `
+<div
+  className="wallet"
+>
+  <div
+    className="ammount"
+  >
+    <EosLoader />
+  </div>
+  <TradeButtons />
+  <div
+    className="resourceinfo"
+  >
+    <div
+      id="ressources_title"
+    >
+      <h4>
+        Ressources
+      </h4>
+      <div>
+        <h5>
+          Staked
+        </h5>
+        <div
+          className="stakedinfo"
+        >
+          <p>
+            0.0000
+          </p>
+          <img
+            alt="EOS-ICON"
+            className="coinIcon"
+            src="https://res.cloudinary.com/munnotubbel/image/upload/v1581182752/wombat/5a52232c2f93c7a8d5137fdd_izhtxc.png"
+          />
+        </div>
+      </div>
+    </div>
+    <Ressources />
+  </div>
+</div>
+`;
