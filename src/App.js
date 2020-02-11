@@ -11,14 +11,12 @@ import Home from "./routes/Home";
 import Header from "./components/Header";
 
 function App() {
-  console.log(window.innerHeight)
-  console.log(document.documentElement.clientHeight)
+  console.log(window.innerHeight);
+  console.log(document.documentElement.clientHeight);
   return (
     <Router>
       <DataContextProvider>
-        <div className="outerContainer"
-        style={{
-        minWidth:`${window.innerWidth}`, height:`${window.innerHeight*1.4} `}}>
+        <div className="outerContainer">
           <div className="innerContainer">
             <div className="header">
               <Header />
