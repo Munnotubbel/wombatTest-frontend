@@ -1,8 +1,13 @@
-import React from "react";
+import React,  { useContext }  from "react";
+import { DataContext } from "../context/DataContext";
 
 const TradeButtons = () => {
-  return (
+  const dataCon = useContext(DataContext);
+  const isLoading = dataCon ? dataCon.isLoading : true;
+  return (<div>
+    {isLoading===true ? <div className="tradebuttons"> </div>:
     <div className="tradebuttons">
+
       <div>
         <button className="tradebutton">buy</button>
       </div>
@@ -12,7 +17,7 @@ const TradeButtons = () => {
       <div>
         <button className="tradebutton">sell</button>
       </div>
-    </div>
+    </div>}</div>
   );
 };
 
