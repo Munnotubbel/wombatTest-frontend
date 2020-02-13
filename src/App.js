@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./css/App.css";
 
@@ -12,10 +12,15 @@ import Header from "./components/Header";
 
 function App() {
   
-  let browserHeight = window.innerHeight;
+  const screenModeMargin = window.matchMedia("(orientation: portrait)").matches
+    ? "0%"
+    : "4%";
+
+  const [browserHeight, setBrowserHeight] = useState(window.innerHeight);
+
   window.addEventListener("orientationchange", function() {
     var afterOrientationChange = function() {
-      browserHeight = window.innerHeight;
+      setBrowserHeight(window.innerHeight);
       window.removeEventListener("resize", afterOrientationChange);
     };
     window.addEventListener("resize", afterOrientationChange);
@@ -25,7 +30,10 @@ function App() {
     <Router>
       <DataContextProvider>
         <div style={{ height: "100%" }}>
-          <div className="outerContainer" style={{ height: browserHeight }}>
+          <div
+            className="outerContainer"
+            style={{ height: browserHeight, marginTop: screenModeMargin }}
+          >
             <div className="innerContainer">
               <div className="header">
                 <Header />
