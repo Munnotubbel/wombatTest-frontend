@@ -4,6 +4,11 @@ import { DataContext } from "../context/DataContext";
 import TradeButtons from "../components/TradeButtons";
 import EosLoader from "../components/EosLoader";
 const Wallet = () => {
+
+  const screenModeMargin = window.matchMedia("(orientation: portrait)").matches
+    ? "0%"
+    : "4%";
+  const styles = {marginTop: screenModeMargin, marginBottom: screenModeMargin}
   const eosIcon =
     "https://res.cloudinary.com/munnotubbel/image/upload/v1581182752/wombat/5a52232c2f93c7a8d5137fdd_izhtxc.png";
 
@@ -18,11 +23,11 @@ const Wallet = () => {
   return (
     <div className="wallet">
       {isLoading === true ? (
-        <div className="ammount">
+        <div className="ammount" style={styles}>
           <EosLoader />
         </div>
       ) : (
-        <div className="ammount">
+        <div className="ammount" style={styles}> 
           <div id="eos">
             <h1>{ballance}</h1>
             <img alt="EOS-ICON" src={eosIcon} />

@@ -11,7 +11,7 @@ import Home from "./routes/Home";
 import Header from "./components/Header";
 
 function App() {
-  
+
   const screenModeMargin = window.matchMedia("(orientation: portrait)").matches
     ? "0%"
     : "4%";
